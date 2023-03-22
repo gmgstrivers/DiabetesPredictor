@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Diabetes Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Diabetes</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+        <label for="sm">Pregnancies:</label>
+    	<input type="text" name="Pregnancies" placeholder="Pregnancies" id="sm" required="required" />
+        <br>
+        <label for="fdm">glucose</label>
+        <input type="text" name="glucose" placeholder="glucose" id="fdm" required="required" />
+        <br>
+        <label for="ase">bp</label>
+		<input type="text" name="bp" placeholder="bp" id="ase" required="required" />
+        <br>
+        <label for="cse">skin</label>
+		<input type="text" name="skin" placeholder="skin" id="cse" required="required" />
+        <br>
+        <label for="cp">insulin</label>
+        <input type="text" name="insulin" placeholder="insulin" id="cp" required="required" />
+        <br>
+        <label for="fds">BMI</label>
+        <input type="text" name="BMI" placeholder="BMI" id="fds" required="required" />
+        <br>
+        <label for="ase1">Pedigree</label>
+        <input type="text" name="Pedigree" placeholder="Pedigree" id="ase1" required="required" />
+        <br>
+        <label for="cw">age</label>
+        <input type="text" name="age" id="cw" placeholder="age" required="required" />
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{prediction_text}}
+
+ </div>
+
+
+</body>
+</html>
